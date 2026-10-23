@@ -1,0 +1,95 @@
+{
+  "site": {
+    "brand": "Mind xTrade",
+    "youtube": "https://www.youtube.com/@Mindxtrade"
+  },
+  "indicators": [
+    {
+      "id": "footprint-signals",
+      "name": "Footprint Signals",
+      "tagline": "Les patterns order flow, nommés barre par barre.",
+      "status": "stable",
+      "category": "Order flow · Footprint",
+      "platform": "ATAS (.NET 10)",
+      "contents": "DLL + guide PDF + code source",
+      "tags": [
+        "Order flow",
+        "ES Range 10"
+      ],
+      "description": "Footprint Signals écrit sous chaque barre clôturée du footprint une étiquette qui nomme le ou les patterns order flow détectés : absorption, transition du delta, flip, no buyer / no seller, delta tail… Un filtre de confluence ne conserve que les situations où plusieurs signaux de même sens se rejoignent, et chaque signal majeur peut afficher son stop logique. Ce n'est pas une stratégie : l'outil confirme une entrée dans une zone que vous avez déjà préparée.",
+      "features": [
+        "7 patterns majeurs : ABS, TRANS PLUS, REVERSAL, FLIP, NOBUYER / NOSELLER, TAIL, SURGE",
+        "Signaux mineurs de renfort : divergences delta et volume, fading, imbalances",
+        "Filtre de confluence : au moins 2 signaux de même sens dont 1 majeur, sans retard d'affichage",
+        "Stop logique tracé sous chaque signal majeur, avec sa distance en ticks",
+        "Zones optionnelles : met en avant les signaux proches de vos niveaux"
+      ],
+      "useCases": [
+        "Confirmer une entrée sur une zone préparée à l'avance (profil, VWAP, narration)",
+        "ES en Range 10 ticks : réglage de référence des seuils par défaut",
+        "NQ, DAX et autres marchés après recalibrage du delta significatif"
+      ],
+      "version": "1.11",
+      "released": "2026-10-23",
+      "file": "downloads/footprint-signals/footprint-signals-v1.11.zip",
+      "size": 144993,
+      "sha256": "bbf37cb87b3581cffc6681fa5d1479cf51aef33b6d191358733fea92225592bc",
+      "guide": "downloads/footprint-signals/footprint-signals-guide-v1.11.pdf",
+      "changelog": [
+        {
+          "version": "1.11",
+          "date": "2026-10-23",
+          "notes": [
+            "Confluence : barre du signal + 1 barre précédente, sans retard d'affichage",
+            "Étiquettes en taille 7, sans gras",
+            "Mode « essentiel » par défaut : au moins 2 signaux de même sens dont 1 majeur"
+          ],
+          "file": "downloads/footprint-signals/footprint-signals-v1.11.zip"
+        }
+      ]
+    },
+    {
+      "id": "tpo-split",
+      "name": "TPO Split",
+      "tagline": "Le Market Profile en lettres, découpable dans la journée.",
+      "status": "stable",
+      "category": "Market Profile · TPO",
+      "platform": "ATAS (.NET 10)",
+      "contents": "DLL + 3 guides PDF",
+      "tags": [
+        "Market Profile",
+        "ES / NQ 30 min"
+      ],
+      "description": "Le TPO natif d'ATAS sait déplier une journée et fusionner des profils, mais pas couper une séance en deux. TPO Split découpe une journée, typiquement au niveau d'une single print, traite chaque morceau comme un profil à part entière avec sa Value Area, son POC et son Initial Balance, puis les regroupe en composites sur plusieurs séances. Un bandeau de rotation des enchères complète la lecture du contexte.",
+      "features": [
+        "Découpe d'une séance en plusieurs profils d'un simple Shift + clic",
+        "Composites multi-séances, niveaux prolongés à droite avec leurs prix",
+        "Value Area, POC, VAH / VAL et Initial Balance pour chaque morceau",
+        "Bandeau de rotation des enchères (facteur de rotation de Dalton) avec lien au Globex",
+        "Coupes et composites mémorisés avec l'espace de travail"
+      ],
+      "useCases": [
+        "Journées à double distribution séparées par une single print",
+        "Construire des zones de valeur sur plusieurs séances",
+        "Lire le contexte de l'ouverture cash US : open drive, rejection, auction"
+      ],
+      "version": "3.7",
+      "released": "2026-10-23",
+      "file": "downloads/tpo-split/tpo-split-v3.7.zip",
+      "size": 4087343,
+      "sha256": "f74928802aba547bfcf58b283471c431ff4cdbd3a022d1dfbe8ab52377033e0a",
+      "guide": "downloads/tpo-split/tpo-split-guide-v3.7.pdf",
+      "changelog": [
+        {
+          "version": "3.7",
+          "date": "2026-10-23",
+          "notes": [
+            "Première publication sur la bibliothèque Mind xTrade",
+            "Documentation complète et aide-mémoire intégrés à l'onglet « À propos »"
+          ],
+          "file": "downloads/tpo-split/tpo-split-v3.7.zip"
+        }
+      ]
+    }
+  ]
+}

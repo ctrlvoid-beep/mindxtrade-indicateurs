@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mind xTrade — Bibliothèque d'indicateurs</title>
+<meta name="description" content="Bibliothèque officielle des indicateurs Mind xTrade : téléchargements, guides d'installation et journal des versions.">
+<meta name="theme-color" content="#0a0b0f">
+<meta property="og:title" content="Mind xTrade — Bibliothèque d'indicateurs">
+<meta property="og:description" content="Téléchargez les dernières versions des indicateurs Mind xTrade, avec guide PDF d'installation.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Mind xTrade, accueil">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="1" y="1" width="30" height="30" rx="8" fill="none" stroke="currentColor" stroke-opacity=".35"/>
+        <path d="M8 22V10l5 7 5-7v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M20 12l5 8M25 12l-5 8" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>Mind <em>x</em>Trade</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigation principale">
+      <a href="#bibliotheque">Indicateurs</a>
+      <a href="#installation">Installation</a>
+      <a href="#versions">Versions</a>
+      <a class="nav-cta" id="nav-youtube" href="#" target="_blank" rel="noopener" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.4-1.6.5-3.2.5-4.8s-.1-3.2-.5-4.8zM9.7 15.1V8.9L15.5 12l-5.8 3.1z"/></svg>
+        YouTube
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-chart" aria-hidden="true">
+      <svg id="hero-svg" preserveAspectRatio="none"></svg>
+    </div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow"><span class="pulse"></span>Bibliothèque officielle</p>
+      <h1>Des indicateurs pensés<br>pour <em>lire le marché</em>,<br>pas pour le deviner.</h1>
+      <p class="lede">Retrouvez ici les outils présentés sur la chaîne Mind xTrade : toujours à jour, livrés avec leur guide d'installation PDF, et documentés version après version.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#bibliotheque">Voir les indicateurs
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12m0 0l-5-5m5 5l5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#installation">Guide d'installation</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>Indicateurs</dt><dd id="stat-count">—</dd></div>
+        <div><dt>Dernière mise à jour</dt><dd id="stat-updated">—</dd></div>
+        <div><dt>Format</dt><dd>ZIP + guide PDF</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- LIBRARY -->
+  <section class="section" id="bibliotheque">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">01 — Bibliothèque</p>
+        <h2>Les indicateurs</h2>
+        <p class="section-sub">Chaque téléchargement contient l'indicateur, son guide PDF et les notes de version. Le bouton pointe toujours vers la dernière version publiée.</p>
+      </div>
+      <div id="library" class="library">
+        <div class="loading">Chargement de la bibliothèque…</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTALL -->
+  <section class="section section-alt" id="installation">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">02 — Installation</p>
+        <h2>Dans ATAS en deux minutes</h2>
+        <p class="section-sub">Les indicateurs sont des DLL pour ATAS. Le guide PDF inclus dans chaque archive détaille les réglages recommandés.</p>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">01</span>
+          <h3>Fermer ATAS, ouvrir le zip</h3>
+          <p>Téléchargez l'archive depuis la bibliothèque, fermez complètement ATAS, puis décompressez le zip.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">02</span>
+          <h3>Copier la DLL</h3>
+          <p>Collez <code>%APPDATA%\ATAS\Indicators</code> dans la barre d'adresse de l'Explorateur et copiez-y le fichier <code>.dll</code>. Avec ATAS X : <code>%APPDATA%\ATAS X\Indicators</code>.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">03</span>
+          <h3>Relancer et ajouter</h3>
+          <p>Relancez ATAS, ouvrez un graphique, <kbd>Ctrl</kbd> + <kbd>I</kbd>, cherchez l'indicateur et ajoutez-le. Le numéro de version s'affiche en bas à gauche du graphique.</p>
+        </li>
+      </ol>
+      <div class="note">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M10 9v5M10 6.2v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <p><strong>Mise à jour :</strong> fermez toujours ATAS avant de remplacer la DLL, puis relancez. Les DLL sont compilées pour la version d'ATAS d'octobre 2026 (.NET 10) : si l'indicateur n'apparaît pas dans la liste, votre version d'ATAS est trop différente.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHANGELOG -->
+  <section class="section" id="versions">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">03 — Journal</p>
+        <h2>Historique des versions</h2>
+        <p class="section-sub">Toutes les publications, de la plus récente à la plus ancienne. Les anciennes versions restent téléchargeables.</p>
+      </div>
+      <div id="timeline" class="timeline"></div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <section class="disclaimer">
+    <div class="wrap">
+      <p><strong>Avertissement.</strong> Les indicateurs proposés sont des outils d'aide à l'analyse, fournis à titre éducatif. Ils ne constituent ni un conseil en investissement, ni une recommandation d'achat ou de vente. Le trading de produits à effet de levier, notamment les contrats à terme, comporte un risque élevé de perte en capital. Les performances passées ne préjugent pas des performances futures.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="brand brand-sm"><span>Mind <em>x</em>Trade</span></div>
+    <p class="footer-meta">© <span id="year"></span> Mind xTrade · Tous droits réservés</p>
+    <div class="footer-links">
+      <a id="foot-youtube" href="#" target="_blank" rel="noopener" hidden>YouTube</a>
+      <a href="#top">Haut de page ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
