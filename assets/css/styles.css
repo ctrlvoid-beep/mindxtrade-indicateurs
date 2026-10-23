@@ -106,6 +106,10 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var
 .hero h1 { font-size: clamp(40px, 6.4vw, 78px); margin: 28px 0 24px; max-width: 14ch; }
 .hero h1 em { font-size: 1.08em; }
 .lede { font-size: clamp(16px, 1.6vw, 19px); color: var(--text-2); max-width: 54ch; }
+.lede strong { color: var(--text); font-weight: 600; }
+.lede-sm { font-size: 15px; color: var(--muted); margin-top: 14px; }
+.lede-sm a { color: var(--text-2); border-bottom: 1px solid var(--line-2); transition: color .2s, border-color .2s; }
+.lede-sm a:hover { color: var(--gold-2); border-color: var(--gold); }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .btn {
